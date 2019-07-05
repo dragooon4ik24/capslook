@@ -2,13 +2,24 @@
 
 function Slider(sliderEl) {
     let sliderItems = sliderEl.querySelectorAll('.capslook-slider__item');
+    let carouselControls = sliderEl.querySelectorAll('.slider-carousel__button');
     let carouselItems = sliderEl.querySelectorAll('.slider-carousel__item');
+    let countSliderItems = carouselItems.length;
     let nextBtn = sliderEl.querySelector('.slider-carousel__button--next');
     let prevBtn = sliderEl.querySelector('.slider-carousel__button--prev');
     let carouselTape = sliderEl.querySelector('.slider-carousel__list');
 
     let position = 0;
     let widthCarouselElement = 138;
+    let minCountVisibleCarouselElement = 6;
+
+    function hideCarouselControls() {
+        if (countSliderItems < minCountVisibleCarouselElement) {
+            Array.prototype.forEach.call(carouselControls, (item) => {
+                item.style.display = 'none';
+            });
+        }
+    }
     nextBtn.addEventListener('click', ()=> {
         position = Math.max(position - widthCarouselElement, -(carouselItems.length - 5) * widthCarouselElement);
         carouselTape.style.marginLeft = position + 'px';
@@ -33,6 +44,7 @@ function Slider(sliderEl) {
         });
         sliderItems[target.dataset.index].style.display = 'block';
     });
+    hideCarouselControls();
 }
 
 let sliders = document.querySelectorAll('.capslook-slider');
