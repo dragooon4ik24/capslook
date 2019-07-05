@@ -1,0 +1,195 @@
+.capslook {
+    width: 994px;
+    min-width: 994px;
+    margin: 0 auto;
+}
+.capslook-slider {
+    margin-bottom: 70px;
+}
+.capslook-header__img,
+.capslook-clothes__img,
+.capslook-slider__image,
+.slider-carousel__img,
+.slider-carousel__img {
+    display: block;
+}
+.capslook-slider__item {
+    display: none;
+}
+.capslook-slider__item:first-child {
+    display: block;
+}
+.capslook-slider__list {
+    position: relative;
+
+    margin: 0;
+    margin-bottom: 60px;
+    padding: 0;
+    list-style: none;
+}
+.capslook-slider__list::after {
+    position: absolute;
+    content: '';
+    left: 117px;
+    bottom: 0;
+
+    width: 758px;
+    height: 2px;
+
+    background-color: #e6e6e6;
+}
+.capslook-clothes__img--clothes {
+    margin-bottom: 70px;
+}
+.visually-hidden {
+    position: absolute;
+
+    width: 1px;
+    height: 1px;
+    margin: -1px;
+    border: 0;
+    padding: 0;
+
+    white-space: nowrap;
+
+    -webkit-clip-path: inset(100%);
+    clip-path: inset(100%);
+
+    clip: rect(0 0 0 0);
+    overflow: hidden;
+}
+.slider-carousel {
+    position: relative;
+
+    margin: 0 auto;
+    width: 820px;
+    z-index: 3;
+}
+.slider-carousel__wrapper {
+    margin: 0 auto;
+    width: 680px;
+    overflow: hidden;
+}
+.slider-carousel__list {
+    margin: 0;
+    padding: 0;
+    width: 9999px;
+    display: flex;
+
+    list-style: none;
+    -webkit-transition: margin-left 0.3s;
+    -moz-transition: margin-left 0.3s;
+    -ms-transition: margin-left 0.3s;
+    -o-transition: margin-left 0.3s;
+    transition: margin-left 0.3s;
+}
+.slider-carousel__item {
+    margin-right: 10px;
+}
+.slider-carousel__item:hover {
+    cursor: pointer;
+}
+.slider-carousel__button {
+    position: absolute;
+    top: 0;
+
+    padding: 0;
+    height: 210px;
+    width: 70px;
+
+    font-size: 0;
+    border: 0;
+    outline: none;
+    background: url("https://images.wbstatic.net/marketing/capslook/june19/arrow-left.png") no-repeat center center;
+}
+.slider-carousel__button:hover {
+    cursor: pointer;
+    opacity: 0.7;
+}
+.slider-carousel__button--prev:active {
+    background-position-x: calc(50% + 2px);
+    background-position-y: calc(50% + 2px);
+    opacity: 0.7;
+}
+.slider-carousel__button--prev {
+    left: 0;
+}
+.slider-carousel__button--next:active {
+    background-position-x: calc(50% - 2px);
+    background-position-y: calc(50% + 2px);
+    opacity: 0.7;
+}
+.slider-carousel__button--next {
+    right: 0;
+    background: url("https://images.wbstatic.net/marketing/capslook/june19/arrow-right.png") no-repeat center center;
+}
+.capslook-footer__title {
+    margin-bottom: 30px;
+    margin-top: 20px;
+}
+.footer-carousel {
+    position: relative;
+
+    margin: 0 auto;
+    margin-bottom: 50px;
+    width: 911px;
+}
+.footer-carousel__wrapper {
+    margin: 0 auto;
+    width: 852px;
+
+    overflow: hidden;
+}
+.footer-carousel__list {
+    margin: 0;
+    padding: 0;
+    display: flex;
+    width: 9999px;
+
+    list-style: none;
+    -webkit-transition: margin-left 0.3s;
+    -moz-transition: margin-left 0.3s;
+    -ms-transition: margin-left 0.3s;
+    -o-transition: margin-left 0.3s;
+    transition: margin-left 0.3s;
+}
+.footer-carousel__item {
+    margin-right: 21px;
+}
+.footer-carousel__button {
+    position: absolute;
+    top: 0;
+
+    padding: 0;
+    height: 276px;
+    width: 30px;
+
+    font-size: 0;
+    border: 0;
+    outline: none;
+    background: url("https://images.wbstatic.net/marketing/capslook/june19/arrow-left.png") no-repeat center center;
+}
+.footer-carousel__button:hover {
+    cursor: pointer;
+    opacity: 0.7;
+}
+.footer-carousel__button--prev:active {
+    background-position-x: calc(50% + 2px);
+    background-position-y: calc(50% + 2px);
+    opacity: 0.7;
+}
+.footer-carousel__button--prev {
+    left: 0;
+}
+.footer-carousel__button--next:active {
+    background-position-x: calc(50% - 2px);
+    background-position-y: calc(50% + 2px);
+    opacity: 0.7;
+}
+.footer-carousel__button--next {
+    right: 0;
+    background: url("https://images.wbstatic.net/marketing/capslook/june19/arrow-right.png") no-repeat center center;
+}
+.footer-carousel__link:hover {
+    opacity: 0.5;
+}
