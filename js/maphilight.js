@@ -30,7 +30,6 @@ $(function() {
     $('.capslook-clothes__img--clothes').maphilight();
     function setCanvasSize () {
         let canvases = document.querySelectorAll('canvas');
-        console.log(canvases);
         Array.prototype.forEach.call(canvases, (canvasItem)=> {
             canvasItem.style.width = canvasItem.parentNode.style.width;
             canvasItem.style.height = canvasItem.parentNode.style.height;
