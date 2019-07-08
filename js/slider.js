@@ -34,15 +34,29 @@ function Slider(sliderEl) {
         item.setAttribute('data-index', index);
     });
 
-    carouselTape.addEventListener('click', (evt)=> {
+    let currentItem = null;
+    carouselTape.addEventListener('mouseover', function(evt) {
+        if(currentItem) return;
         let target = evt.target;
         while (target.tagName !== 'LI') {
             target = target.parentNode;
         }
-        Array.prototype.forEach.call(sliderItems, (item)=> {
-            item.style.display = 'none';
+        if (target == this) return;
+        Array.prototype.forEach.call(carouselItems, (item, index)=> {
+            if(item.classList.contains('slider-carousel__item--border')) {
+                item.classList.remove('slider-carousel__item--border');
+                sliderItems[index].style.display = 'none';
+            }
         });
+
+        target.classList.add('slider-carousel__item--border');
         sliderItems[target.dataset.index].style.display = 'block';
+        currentItem = target;
+    });
+    carouselTape.addEventListener('mouseout', function (evt) {
+        let target = evt.target;
+        if(target.tagName === 'IMG') return;
+        currentItem = null;
     });
     hideCarouselControls();
 }
