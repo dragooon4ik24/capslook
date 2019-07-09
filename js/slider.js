@@ -34,9 +34,7 @@ function Slider(sliderEl) {
         item.setAttribute('data-index', index);
     });
 
-    let currentItem = null;
     carouselTape.addEventListener('mouseover', function(evt) {
-        if(currentItem) return;
         let target = evt.target;
         while (target.tagName !== 'LI') {
             target = target.parentNode;
@@ -51,12 +49,11 @@ function Slider(sliderEl) {
 
         target.classList.add('slider-carousel__item--border');
         sliderItems[target.dataset.index].style.display = 'block';
-        currentItem = target;
     });
     carouselTape.addEventListener('mouseout', function (evt) {
         let target = evt.target;
         if(target.tagName === 'IMG') return;
-        currentItem = null;
+        console.log(target);
     });
     hideCarouselControls();
 }
